@@ -53,7 +53,21 @@ export function BurbujaChat({
           <p className="text-[15px] leading-relaxed whitespace-pre-wrap">{contenido}</p>
         ) : (
           <div className="prose prose-sm max-w-none prose-headings:text-itc-navy prose-a:text-blue-600 prose-strong:font-semibold prose-code:bg-gray-100 prose-code:px-1 prose-code:rounded">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                a: ({ href, children }) => {
+                  const url = href && !href.match(/^[a-zA-Z][a-zA-Z0-9+.-]*:/) && !href.startsWith("/") && !href.startsWith("#")
+                    ? `https://${href}`
+                    : href
+                  return (
+                    <a href={url} target="_blank" rel="noopener noreferrer">
+                      {children}
+                    </a>
+                  )
+                }
+              }}
+            >
               {contenido}
             </ReactMarkdown>
           </div>
