@@ -34,10 +34,10 @@ export function BurbujaChat({
     >
       <div
         className={cn(
-          "max-w-[85%] rounded-2xl px-4 py-3 shadow-sm",
+          "max-w-[85%] rounded-none px-4 py-3 shadow-sm",
           esUsuario
-            ? "bg-itc-navy text-white rounded-br-md"
-            : "bg-white border border-gray-100 text-gray-800 rounded-bl-md"
+            ? "bg-itc-navy text-white rounded-none"
+            : "bg-white border border-gray-100 text-gray-800 rounded-none"
         )}
       >
         {pregunta && !esUsuario && (
@@ -66,7 +66,7 @@ export function BurbujaChat({
                 key={i}
                 onClick={() => onRespuesta(opcion.valor)}
                 className={cn(
-                  "px-3 py-2 rounded-lg text-sm font-medium transition-all",
+                  "px-3 py-2 rounded-none text-sm font-medium transition-all",
                   "bg-itc-navy/5 hover:bg-itc-navy hover:text-white",
                   "border border-itc-navy/20 hover:border-itc-navy",
                   "active:scale-95"

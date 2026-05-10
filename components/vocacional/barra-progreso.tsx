@@ -14,9 +14,9 @@ export function BarraProgreso({ progreso, className }: BarraProgresoProps) {
         <span className="text-sm font-medium text-itc-navy">Progreso del cuestionario</span>
         <span className="text-sm font-bold text-itc-gold">{Math.round(progreso)}%</span>
       </div>
-      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+      <div className="h-2 bg-gray-200 rounded-none overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-itc-navy to-itc-gold rounded-full transition-all duration-500 ease-out"
+          className="h-full bg-gradient-to-r from-itc-navy to-itc-gold rounded-none transition-all duration-500 ease-out"
           style={{ width: `${progreso}%` }}
         />
       </div>

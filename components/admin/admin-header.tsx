@@ -11,11 +11,11 @@ export function AdminHeader() {
     <header className="bg-itc-navy text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-itc-gold rounded-lg flex items-center justify-center">
+          <div className="w-10 h-10 bg-itc-gold rounded-[8px] flex items-center justify-center">
             <FaCog className="w-5 h-5 text-white" />
           </div>
           <div>
-            <h1 className="font-serif text-lg font-bold leading-tight">
+            <h1 className="font-serif text-lg font-bold leading-tight text-white">
               Panel de Administración
             </h1>
             <p className="text-itc-gold text-xs">
@@ -27,7 +27,7 @@ export function AdminHeader() {
         <button
           onClick={logout}
           className={cn(
-            "flex items-center gap-2 px-4 py-2 rounded-lg",
+            "flex items-center gap-2 px-4 py-2 rounded-none",
             "bg-white/10 hover:bg-white/20 transition-colors",
             "text-sm font-medium"
           )}

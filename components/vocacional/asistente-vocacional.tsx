@@ -139,7 +139,7 @@ export function AsistenteVocacional() {
         <div className="max-w-2xl mx-auto space-y-2">
           {fase === "bienvenida" && (
             <div className="text-center py-8 animate-in fade-in duration-500">
-              <div className="w-20 h-20 bg-itc-navy rounded-full mx-auto mb-6 flex items-center justify-center">
+              <div className="w-20 h-20 bg-itc-navy rounded-[20px] mx-auto mb-6 flex items-center justify-center">
                 <FaGraduationCap className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-2xl font-serif font-bold text-itc-navy mb-3">
@@ -152,7 +152,7 @@ export function AsistenteVocacional() {
               <button
                 onClick={iniciarCuestionario}
                 className={cn(
-                  "bg-itc-navy text-white px-8 py-3 rounded-xl font-medium",
+                  "bg-itc-navy text-white px-8 py-3 rounded-none font-medium",
                   "hover:bg-itc-navy/90 transition-all",
                   "shadow-lg hover:shadow-xl active:scale-95"
                 )}
@@ -211,11 +211,11 @@ export function AsistenteVocacional() {
 
           {(status === "submitted" || status === "streaming") && (
             <div className="flex justify-start">
-              <div className="bg-white border border-gray-100 rounded-2xl rounded-bl-md px-4 py-3 shadow-sm">
+              <div className="bg-white border border-gray-100 rounded-none px-4 py-3 shadow-sm">
                 <div className="flex gap-1">
-                  <span className="w-2 h-2 bg-itc-navy rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                  <span className="w-2 h-2 bg-itc-navy rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                  <span className="w-2 h-2 bg-itc-navy rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                  <span className="w-2 h-2 bg-itc-navy rounded-none animate-bounce" style={{ animationDelay: "0ms" }} />
+                  <span className="w-2 h-2 bg-itc-navy rounded-none animate-bounce" style={{ animationDelay: "150ms" }} />
+                  <span className="w-2 h-2 bg-itc-navy rounded-none animate-bounce" style={{ animationDelay: "300ms" }} />
                 </div>
               </div>
             </div>
@@ -238,7 +238,7 @@ export function AsistenteVocacional() {
                 : "Escribe algo para comenzar..."
               }
               className={cn(
-                "flex-1 px-4 py-3 rounded-xl border border-gray-200",
+                "flex-1 px-4 py-3 rounded-none border border-gray-200",
                 "focus:outline-none focus:ring-2 focus:ring-itc-navy/20 focus:border-itc-navy",
                 "placeholder:text-gray-400"
               )}
@@ -247,7 +247,7 @@ export function AsistenteVocacional() {
               type="submit"
               disabled={!inputLocal.trim() || status === "streaming"}
               className={cn(
-                "bg-itc-navy text-white px-4 py-3 rounded-xl",
+                "bg-itc-navy text-white px-4 py-3 rounded-none",
                 "hover:bg-itc-navy/90 transition-all",
                 "disabled:opacity-50 disabled:cursor-not-allowed",
                 "active:scale-95"

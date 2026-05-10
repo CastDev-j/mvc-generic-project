@@ -18,7 +18,7 @@ const MEDALLAS = [
 export function TarjetaResultados({ resultados, className }: TarjetaResultadosProps) {
   return (
     <div className={cn(
-      "bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden",
+      "bg-white rounded-none shadow-lg border border-gray-100 overflow-hidden",
       className
     )}>
       <div className="bg-gradient-to-r from-itc-navy to-itc-navy/90 px-6 py-4">
@@ -36,7 +36,7 @@ export function TarjetaResultados({ resultados, className }: TarjetaResultadosPr
           <div
             key={resultado.carrera.id}
             className={cn(
-              "p-4 rounded-xl transition-all hover:shadow-md",
+              "p-4 rounded-none transition-all hover:shadow-md",
               index === 0 ? "bg-itc-gold/10 border-2 border-itc-gold" : "bg-gray-50 border border-gray-100"
             )}
           >
@@ -61,10 +61,10 @@ export function TarjetaResultados({ resultados, className }: TarjetaResultadosPr
                       {resultado.porcentaje}%
                     </span>
                   </div>
-                  <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div className="h-2 bg-gray-200 rounded-none overflow-hidden">
                     <div
                       className={cn(
-                        "h-full rounded-full transition-all duration-700",
+                        "h-full rounded-none transition-all duration-700",
                         resultado.porcentaje >= 80
                           ? "bg-gradient-to-r from-green-400 to-green-600"
                           : resultado.porcentaje >= 60
@@ -80,7 +80,7 @@ export function TarjetaResultados({ resultados, className }: TarjetaResultadosPr
                   {resultado.carrera.campo_laboral.slice(0, 3).map((campo, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-itc-navy/10 text-itc-navy px-2 py-0.5 rounded-full"
+                      className="text-xs bg-itc-navy/10 text-itc-navy px-2 py-0.5 rounded-none"
                     >
                       {campo}
                     </span>

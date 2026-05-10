@@ -15,7 +15,7 @@ export function LoginSelector() {
     <div className="min-h-screen bg-gradient-to-br from-itc-navy via-itc-navy/95 to-itc-navy flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="w-20 h-20 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+          <div className="w-20 h-20 bg-white rounded-[16px] mx-auto mb-4 flex items-center justify-center shadow-lg">
             <FaUniversity className="w-10 h-10 text-itc-navy" />
           </div>
           <h1 className="text-3xl font-serif font-bold text-white mb-2">
@@ -26,7 +26,7 @@ export function LoginSelector() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-2xl p-6">
+        <div className="bg-white rounded-none shadow-2xl p-6">
           <h2 className="text-xl font-semibold text-gray-800 text-center mb-6">
             Selecciona tu rol para continuar
           </h2>
@@ -35,14 +35,14 @@ export function LoginSelector() {
             <button
               onClick={() => handleSelectRol("usuario")}
               className={cn(
-                "w-full p-4 rounded-xl border-2 border-gray-200",
+                "w-full p-4 rounded-none border-2 border-gray-200",
                 "hover:border-itc-navy hover:bg-itc-navy/5",
                 "transition-all duration-200 group",
                 "flex items-center gap-4"
               )}
             >
               <div className={cn(
-                "w-14 h-14 rounded-xl flex items-center justify-center",
+                "w-14 h-14 rounded-[12px] flex items-center justify-center",
                 "bg-itc-navy/10 group-hover:bg-itc-navy",
                 "transition-colors duration-200"
               )}>
@@ -64,14 +64,14 @@ export function LoginSelector() {
             <button
               onClick={() => handleSelectRol("admin")}
               className={cn(
-                "w-full p-4 rounded-xl border-2 border-gray-200",
+                "w-full p-4 rounded-none border-2 border-gray-200",
                 "hover:border-itc-gold hover:bg-itc-gold/5",
                 "transition-all duration-200 group",
                 "flex items-center gap-4"
               )}
             >
               <div className={cn(
-                "w-14 h-14 rounded-xl flex items-center justify-center",
+                "w-14 h-14 rounded-[12px] flex items-center justify-center",
                 "bg-itc-gold/10 group-hover:bg-itc-gold",
                 "transition-colors duration-200"
               )}>

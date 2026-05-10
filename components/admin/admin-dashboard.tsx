@@ -40,7 +40,7 @@ export function AdminDashboard() {
               key={tab.id}
               onClick={() => setTabActual(tab.id)}
               className={cn(
-                "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all whitespace-nowrap",
+                "flex items-center gap-2 px-4 py-2 rounded-none font-medium transition-all whitespace-nowrap",
                 tabActual === tab.id
                   ? "bg-itc-navy text-white shadow-md"
                   : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
@@ -63,11 +63,11 @@ export function AdminDashboard() {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-white rounded-xl p-5 shadow-sm border border-gray-100"
+                  className="bg-white rounded-none p-5 shadow-sm border border-gray-100"
                 >
                   <div className="flex items-center gap-4">
                     <div className={cn(
-                      "w-12 h-12 rounded-xl flex items-center justify-center",
+                      "w-12 h-12 rounded-[10px] flex items-center justify-center",
                       stat.color
                     )}>
                       <stat.icon className="w-6 h-6 text-white" />
@@ -81,10 +81,10 @@ export function AdminDashboard() {
               ))}
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-none p-6 shadow-sm border border-gray-100">
               <h3 className="text-lg font-bold text-gray-800 mb-4">Arquitectura del Sistema</h3>
               <div className="grid md:grid-cols-3 gap-4">
-                <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                <div className="p-4 bg-blue-50 rounded-none border border-blue-100">
                   <h4 className="font-semibold text-blue-800 mb-2">Modelo (Datos)</h4>
                   <ul className="text-sm text-blue-700 space-y-1">
                     <li>- Base de conocimientos</li>
@@ -93,7 +93,7 @@ export function AdminDashboard() {
                     <li>- Reglas de inferencia</li>
                   </ul>
                 </div>
-                <div className="p-4 bg-green-50 rounded-lg border border-green-100">
+                <div className="p-4 bg-green-50 rounded-none border border-green-100">
                   <h4 className="font-semibold text-green-800 mb-2">Vista (Interfaz)</h4>
                   <ul className="text-sm text-green-700 space-y-1">
                     <li>- Interfaz de usuario</li>
@@ -102,7 +102,7 @@ export function AdminDashboard() {
                     <li>- Resultados visuales</li>
                   </ul>
                 </div>
-                <div className="p-4 bg-purple-50 rounded-lg border border-purple-100">
+                <div className="p-4 bg-purple-50 rounded-none border border-purple-100">
                   <h4 className="font-semibold text-purple-800 mb-2">Controlador (Motor)</h4>
                   <ul className="text-sm text-purple-700 space-y-1">
                     <li>- Motor de inferencia</li>
@@ -114,7 +114,7 @@ export function AdminDashboard() {
               </div>
             </div>
 
-            <div className="bg-itc-navy/5 rounded-xl p-6 border border-itc-navy/10">
+            <div className="bg-itc-navy/5 rounded-none p-6 border border-itc-navy/10">
               <h3 className="text-lg font-bold text-itc-navy mb-2">Sistema Experto Vocacional</h3>
               <p className="text-gray-600 text-sm">
                 Este sistema utiliza un motor de inferencia basado en reglas con encadenamiento hacia adelante,

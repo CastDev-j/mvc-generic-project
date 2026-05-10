@@ -25,7 +25,7 @@ export function AdminReglas() {
         <button
           onClick={() => setMostrarModal(true)}
           className={cn(
-            "flex items-center gap-2 px-4 py-2 rounded-lg",
+            "flex items-center gap-2 px-4 py-2 rounded-none",
             "bg-itc-navy text-white hover:bg-itc-navy/90",
             "transition-colors font-medium"
           )}
@@ -35,7 +35,7 @@ export function AdminReglas() {
         </button>
       </div>
 
-      <div className="bg-itc-gold/10 border border-itc-gold/30 rounded-lg p-4">
+      <div className="bg-itc-gold/10 border border-itc-gold/30 rounded-none p-4">
         <h4 className="font-semibold text-itc-navy mb-1">Encadenamiento hacia adelante</h4>
         <p className="text-sm text-gray-600">
           El sistema evalúa las condiciones (SI) y cuando se cumplen, ejecuta las acciones (ENTONCES)
@@ -47,12 +47,12 @@ export function AdminReglas() {
         {reglas.map((regla, index) => (
           <div
             key={regla.id}
-            className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white rounded-none border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="w-8 h-8 bg-itc-navy text-white rounded-lg flex items-center justify-center text-sm font-bold">
+                  <span className="w-8 h-8 bg-itc-navy text-white rounded-[8px] flex items-center justify-center text-sm font-bold">
                     R{index + 1}
                   </span>
                   <FaCodeBranch className="w-4 h-4 text-itc-gold" />
@@ -62,14 +62,14 @@ export function AdminReglas() {
                 </div>
 
                 <div className="mb-3">
-                  <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded mb-2">
+                  <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-none mb-2">
                     SI
                   </span>
                   <div className="ml-4 space-y-1">
                     {regla.condiciones.map((cond, i) => (
                       <div key={i} className="text-sm text-gray-700 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                        <span className="font-mono bg-gray-100 px-1 rounded">{cond.variable}</span>
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-none"></span>
+                        <span className="font-mono bg-gray-100 px-1 rounded-none">{cond.variable}</span>
                         <span className="text-gray-400">{cond.operador}</span>
                         <span className="font-semibold">{String(cond.valor)}</span>
                         {i < regla.condiciones.length - 1 && (
@@ -81,7 +81,7 @@ export function AdminReglas() {
                 </div>
 
                 <div>
-                  <span className="inline-flex items-center gap-1 bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded mb-2">
+                  <span className="inline-flex items-center gap-1 bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-none mb-2">
                     <FaArrowRight className="w-3 h-3" />
                     ENTONCES
                   </span>
@@ -94,13 +94,13 @@ export function AdminReglas() {
               <div className="flex gap-2">
                 <button
                   onClick={() => setMostrarModal(true)}
-                  className="p-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-itc-navy transition-colors"
+                  className="p-2 rounded-none hover:bg-gray-100 text-gray-600 hover:text-itc-navy transition-colors"
                 >
                   <FaEdit className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => handleEliminar(regla.id)}
-                  className="p-2 rounded-lg hover:bg-red-50 text-gray-600 hover:text-red-500 transition-colors"
+                  className="p-2 rounded-none hover:bg-red-50 text-gray-600 hover:text-red-500 transition-colors"
                 >
                   <FaTrash className="w-4 h-4" />
                 </button>
@@ -112,7 +112,7 @@ export function AdminReglas() {
 
       {mostrarModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl max-w-lg w-full p-6">
+          <div className="bg-white rounded-none max-w-lg w-full p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-4">
               Gestión de Regla
             </h3>
@@ -121,7 +121,7 @@ export function AdminReglas() {
             </p>
             <button
               onClick={() => setMostrarModal(false)}
-              className="w-full py-2 bg-itc-navy text-white rounded-lg hover:bg-itc-navy/90"
+              className="w-full py-2 bg-itc-navy text-white rounded-none hover:bg-itc-navy/90"
             >
               Cerrar
             </button>

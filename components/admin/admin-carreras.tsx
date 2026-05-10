@@ -42,7 +42,7 @@ export function AdminCarreras() {
         <button
           onClick={handleNueva}
           className={cn(
-            "flex items-center gap-2 px-4 py-2 rounded-lg",
+            "flex items-center gap-2 px-4 py-2 rounded-none",
             "bg-itc-navy text-white hover:bg-itc-navy/90",
             "transition-colors font-medium"
           )}
@@ -60,7 +60,7 @@ export function AdminCarreras() {
           value={busqueda}
           onChange={(e) => setBusqueda(e.target.value)}
           className={cn(
-            "w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200",
+            "w-full pl-10 pr-4 py-3 rounded-none border border-gray-200",
             "focus:outline-none focus:ring-2 focus:ring-itc-navy/20 focus:border-itc-navy"
           )}
         />
@@ -70,7 +70,7 @@ export function AdminCarreras() {
         {carrerasFiltradas.map((carrera) => (
           <div
             key={carrera.id}
-            className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white rounded-none border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
@@ -96,7 +96,7 @@ export function AdminCarreras() {
                   {carrera.perfil_ideal.slice(0, 3).map((perfil, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-itc-navy/10 text-itc-navy px-2 py-1 rounded-full"
+                      className="text-xs bg-itc-navy/10 text-itc-navy px-2 py-1 rounded-none"
                     >
                       {perfil}
                     </span>
@@ -107,13 +107,13 @@ export function AdminCarreras() {
               <div className="flex gap-2">
                 <button
                   onClick={() => handleEditar(carrera)}
-                  className="p-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-itc-navy transition-colors"
+                  className="p-2 rounded-none hover:bg-gray-100 text-gray-600 hover:text-itc-navy transition-colors"
                 >
                   <FaEdit className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => handleEliminar(carrera.id)}
-                  className="p-2 rounded-lg hover:bg-red-50 text-gray-600 hover:text-red-500 transition-colors"
+                  className="p-2 rounded-none hover:bg-red-50 text-gray-600 hover:text-red-500 transition-colors"
                 >
                   <FaTrash className="w-4 h-4" />
                 </button>
@@ -131,7 +131,7 @@ export function AdminCarreras() {
 
       {mostrarModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl max-w-lg w-full p-6">
+          <div className="bg-white rounded-none max-w-lg w-full p-6">
             <h3 className="text-xl font-bold text-gray-800 mb-4">
               {carreraEditando ? "Editar Carrera" : "Nueva Carrera"}
             </h3>
@@ -140,7 +140,7 @@ export function AdminCarreras() {
             </p>
             <button
               onClick={() => setMostrarModal(false)}
-              className="w-full py-2 bg-itc-navy text-white rounded-lg hover:bg-itc-navy/90"
+              className="w-full py-2 bg-itc-navy text-white rounded-none hover:bg-itc-navy/90"
             >
               Cerrar
             </button>
