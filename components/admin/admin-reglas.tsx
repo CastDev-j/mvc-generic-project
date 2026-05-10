@@ -50,7 +50,7 @@ export function AdminReglas() {
             className="bg-white rounded-none border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-start justify-between gap-4">
-              <div className="flex-1">
+              <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="w-8 h-8 bg-itc-navy text-white rounded-[8px] flex items-center justify-center text-sm font-bold">
                     R{index + 1}
@@ -91,7 +91,7 @@ export function AdminReglas() {
                 </div>
               </div>
 
-              <div className="flex gap-2">
+              <div className="flex gap-2 shrink-0">
                 <button
                   onClick={() => setMostrarModal(true)}
                   className="p-2 rounded-none hover:bg-gray-100 text-gray-600 hover:text-itc-navy transition-colors"

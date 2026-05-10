@@ -27,13 +27,13 @@ export function AdminHeader() {
         <button
           onClick={logout}
           className={cn(
-            "flex items-center gap-2 px-4 py-2 rounded-none",
+            "flex items-center gap-2 px-3 py-1.5 rounded-none",
             "bg-white/10 hover:bg-white/20 transition-colors",
             "text-sm font-medium"
           )}
         >
           <FaSignOutAlt className="w-4 h-4" />
-          Cerrar Sesión
+          <span className="hidden sm:inline">Cerrar Sesión</span>
         </button>
       </div>
     </header>

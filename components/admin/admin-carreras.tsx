@@ -73,7 +73,7 @@ export function AdminCarreras() {
             className="bg-white rounded-none border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-start justify-between gap-4">
-              <div className="flex-1">
+              <div className="min-w-0 flex-1">
                 <h3 className="font-semibold text-lg text-gray-800">
                   {carrera.nombre}
                 </h3>
@@ -104,7 +104,7 @@ export function AdminCarreras() {
                 </div>
               </div>
 
-              <div className="flex gap-2">
+              <div className="flex gap-2 shrink-0">
                 <button
                   onClick={() => handleEditar(carrera)}
                   className="p-2 rounded-none hover:bg-gray-100 text-gray-600 hover:text-itc-navy transition-colors"
