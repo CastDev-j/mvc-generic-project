@@ -1,0 +1,5 @@
+export { AdminHeader } from "./admin-header"
+export { AdminDashboard } from "./admin-dashboard"
+export { AdminCarreras } from "./admin-carreras"
+export { AdminPreguntas } from "./admin-preguntas"
+export { AdminReglas } from "./admin-reglas"
