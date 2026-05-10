@@ -19,7 +19,7 @@ export function HeaderITC({ estadoConexion = "conectado" }: HeaderITCProps) {
             <span className="text-itc-navy font-bold text-lg">ITC</span>
           </div>
           <div>
-            <h1 className="font-serif text-lg font-bold leading-tight">
+            <h1 className="font-serif text-lg font-bold leading-tight text-white">
               Asistente Vocacional
             </h1>
             <p className="text-itc-gold text-xs">

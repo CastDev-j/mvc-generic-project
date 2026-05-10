@@ -1,10 +1,11 @@
 import type { Metadata, Viewport } from 'next'
-import { DM_Sans, DM_Serif_Display, Geist_Mono } from 'next/font/google'
+import { DM_Sans, DM_Serif_Display, Geist_Mono, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const dmSans = DM_Sans({ 
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-dm-sans"
 })
 
