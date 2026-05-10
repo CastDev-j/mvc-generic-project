@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils"
 import { useAuth, type Rol } from "@/lib/auth/auth-context"
-import { FaUserGraduate, FaUserCog, FaUniversity } from "react-icons/fa"
+import { FaUserGraduate, FaUserCog } from "react-icons/fa"
 
 export function LoginSelector() {
   const { setRol } = useAuth()
@@ -15,8 +15,8 @@ export function LoginSelector() {
     <div className="min-h-screen bg-gradient-to-br from-itc-navy via-itc-navy/95 to-itc-navy flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="w-20 h-20 bg-white rounded-[16px] mx-auto mb-4 flex items-center justify-center shadow-lg">
-            <FaUniversity className="w-10 h-10 text-itc-navy" />
+          <div className="w-20 h-20 bg-white rounded-[16px] mx-auto mb-4 flex items-center justify-center shadow-lg overflow-hidden p-1">
+            <img src="/logo.jpg" alt="ITC Celaya" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-3xl font-serif font-bold text-white mb-2">
             Asistente Vocacional IA

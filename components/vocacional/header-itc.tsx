@@ -15,8 +15,8 @@ export function HeaderITC({ estadoConexion = "conectado" }: HeaderITCProps) {
     <header className="bg-itc-navy text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-white rounded-none flex items-center justify-center">
-            <span className="text-itc-navy font-bold text-lg">ITC</span>
+          <div className="w-10 h-10 bg-white rounded-none flex items-center justify-center overflow-hidden p-0.5">
+            <img src="/logo.jpg" alt="ITC Celaya" className="w-full h-full object-contain" />
           </div>
           <div>
             <h1 className="font-serif text-lg font-bold leading-tight text-white">
